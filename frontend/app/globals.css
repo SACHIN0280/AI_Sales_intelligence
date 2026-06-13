@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #141414;
+  color: #e0e0e0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+
+/* ── Layout ── */
+.page { padding: 40px 48px; }
+.page-title { font-size: 24px; font-weight: 600; color: #f0f0f0; margin-bottom: 4px; }
+.page-subtitle { font-size: 13px; color: #555; }
+.page-header { margin-bottom: 32px; display: flex; align-items: baseline; gap: 24px; }
+.page-header-meta { font-size: 13px; color: #555; }
+.page-header-metric { font-size: 20px; font-weight: 600; color: #4f7bff; }
+
+/* ── Table ── */
+.relay-table { width: 100%; border-collapse: collapse; }
+.relay-table th {
+  text-align: left; font-size: 13px; font-weight: 400;
+  color: #555; padding: 8px 16px;
+  border-bottom: 1px solid #222;
+}
+.relay-table td {
+  padding: 14px 16px; font-size: 14px; color: #d0d0d0;
+  border-bottom: 1px solid #1e1e1e; vertical-align: top;
+}
+.relay-table tr:hover td { background: rgba(255,255,255,0.015); }
+.relay-table .row-title { font-size: 14px; color: #e8e8e8; font-weight: 500; }
+.relay-table .row-sub { font-size: 12px; color: #555; margin-top: 2px; }
+
+/* Health states */
+.health-healthy { color: #d0d0d0; font-size: 13px; }
+.health-drifting { color: #f59e0b; font-size: 13px; }
+.health-atrisk { color: #ef4444; font-size: 13px; }
+.health-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: middle; }
+.dot-healthy { background: #555; }
+.dot-drifting { background: #f59e0b; }
+.dot-atrisk { background: #ef4444; }
+
+/* ── Stage dropdown ── */
+.stage-select {
+  background: transparent; border: none; color: #888;
+  font-size: 13px; font-family: inherit; cursor: pointer;
+  appearance: none; padding-right: 14px;
+}
+
+/* ── Sidebar nav ── */
+.nav-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 10px; border-radius: 6px;
+  font-size: 14px; color: #888; cursor: pointer;
+  text-decoration: none; transition: background 0.1s, color 0.1s;
+  margin-bottom: 2px;
+}
+.nav-item:hover { background: #1f1f1f; color: #ccc; }
+.nav-item.active { background: #252525; color: #f0f0f0; }
+
+/* ── Inputs ── */
+.relay-input {
+  width: 100%; background: #1a1a1a;
+  border: 1px solid #2a2a2a; border-radius: 8px;
+  padding: 10px 14px; font-size: 13px;
+  font-family: Inter, system-ui, sans-serif;
+  color: #d0d0d0; outline: none; resize: vertical;
+  transition: border-color 0.15s;
+}
+.relay-input:focus { border-color: #4f7bff; }
+.relay-input::placeholder { color: #3a3a3a; }
+
+.field-label {
+  font-size: 12px; color: #555; margin-bottom: 6px; display: block;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: #4f7bff; border: none; border-radius: 7px;
+  padding: 10px 18px; font-size: 13px; font-weight: 500;
+  color: white; cursor: pointer; font-family: inherit;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent; border: 1px solid #2a2a2a;
+  border-radius: 7px; padding: 7px 14px;
+  font-size: 13px; color: #777; cursor: pointer;
+  font-family: inherit; transition: border-color 0.15s, color 0.15s;
+}
+.btn-ghost:hover { border-color: #444; color: #ccc; }
+
+/* ── KPI strip ── */
+.kpi-strip { display: flex; gap: 40px; margin-bottom: 32px; }
+.kpi-item {}
+.kpi-value { font-size: 22px; font-weight: 600; color: #f0f0f0; }
+.kpi-value.accent { color: #4f7bff; }
+.kpi-label { font-size: 12px; color: #555; margin-top: 2px; }
+
+/* ── Section divider ── */
+.section-divider { border: none; border-top: 1px solid #222; margin: 24px 0; }
+
+/* ── Insight rows ── */
+.insight-row {
+  display: flex; align-items: flex-start;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid #1e1e1e;
+}
+.insight-row:last-child { border-bottom: none; }
+.insight-name { font-size: 14px; color: #e0e0e0; font-weight: 500; }
+.insight-sub { font-size: 12px; color: #555; margin-top: 3px; }
+
+/* ── Badges ── */
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+.badge-high { background: rgba(239,68,68,0.1); color: #f87171; }
+.badge-med  { background: rgba(245,158,11,0.1); color: #fbbf24; }
+.badge-low  { background: rgba(99,102,241,0.1); color: #818cf8; }
+
+/* ── Empty state ── */
+.empty-state { text-align: center; padding: 80px 20px; }
+.empty-state-icon { color: #333; margin-bottom: 16px; }
+.empty-state-title { font-size: 16px; color: #888; margin-bottom: 8px; }
+.empty-state-sub { font-size: 13px; color: #555; }
+.empty-state-link { color: #4f7bff; text-decoration: none; }
+.empty-state-link:hover { text-decoration: underline; }
+
+/* ── Chip filters ── */
+.chip-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip {
+  background: transparent; border: 1px solid #272727;
+  border-radius: 6px; padding: 5px 12px;
+  font-size: 12px; color: #666; cursor: pointer;
+  transition: all 0.15s; font-family: inherit;
+}
+.chip:hover { border-color: #444; color: #ccc; }
+.chip.active { border-color: #4f7bff; color: #4f7bff; background: rgba(79,123,255,0.06); }
+
+/* ── Search ── */
+.relay-search {
+  background: #1a1a1a; border: 1px solid #252525;
+  border-radius: 7px; padding: 8px 14px;
+  font-size: 13px; color: #d0d0d0;
+  font-family: inherit; outline: none; width: 280px;
+}
+.relay-search:focus { border-color: #4f7bff; }
+.relay-search::placeholder { color: #3a3a3a; }
+
+/* ── Typing animation ── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typing-dot {
+  display: inline-block; width: 5px; height: 5px;
+  border-radius: 50%; background: #4f7bff; opacity: 0.6;
+  animation: blink 1.2s step-end infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 150ms; }
+.typing-dot:nth-child(3) { animation-delay: 300ms; }
+.typing-cursor::after {
+  content: '|'; animation: blink 0.8s step-end infinite; color: #4f7bff;
+}

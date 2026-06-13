@@ -1,0 +1,402 @@
+[
+  {
+    "activity_id": "ACT-90001",
+    "timestamp": "2026-06-15T09:35:10Z",
+    "account_name": "Bioholding",
+    "sales_rep": "Versie Hillebrand",
+    "activity_type": "Sales Call Completed",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Initial discovery regarding MG Special. Budget is a primary concern."
+  },
+  {
+    "activity_id": "ACT-90002",
+    "timestamp": "2026-06-15T09:40:00Z",
+    "account_name": "Bioholding",
+    "sales_rep": "Versie Hillebrand",
+    "activity_type": "Email Sent",
+    "priority": "Low",
+    "status": "Completed",
+    "short_description": "Sent MG Special technical specs and API documentation."
+  },
+  {
+    "activity_id": "ACT-90003",
+    "timestamp": "2026-06-15T11:45:22Z",
+    "account_name": "Blackzim",
+    "sales_rep": "Cecily Lampkin",
+    "activity_type": "Negotiation Started",
+    "priority": "High",
+    "status": "Active",
+    "short_description": "Client negotiating for a 10% volume discount on GTX Pro."
+  },
+  {
+    "activity_id": "ACT-90004",
+    "timestamp": "2026-06-15T12:05:00Z",
+    "account_name": "Blackzim",
+    "sales_rep": "Cecily Lampkin",
+    "activity_type": "Contract Requested",
+    "priority": "Critical",
+    "status": "In Progress",
+    "short_description": "Requested Legal to draft MSA including Q1 expansion clause."
+  },
+  {
+    "activity_id": "ACT-90005",
+    "timestamp": "2026-06-16T08:15:00Z",
+    "account_name": "Bioholding",
+    "sales_rep": "Versie Hillebrand",
+    "activity_type": "Email Opened",
+    "priority": "Low",
+    "status": "Tracked",
+    "short_description": "Dr. Thorne opened 'MG Special API Docs' 2 times."
+  },
+  {
+    "activity_id": "ACT-90006",
+    "timestamp": "2026-06-16T10:30:15Z",
+    "account_name": "Bioplex",
+    "sales_rep": "Lajuana Vencill",
+    "activity_type": "Follow-up Pending",
+    "priority": "High",
+    "status": "Scheduled",
+    "short_description": "Send SOC2 report and Trust Center NDA to security team."
+  },
+  {
+    "activity_id": "ACT-90007",
+    "timestamp": "2026-06-16T11:00:00Z",
+    "account_name": "Acme Corporation",
+    "sales_rep": "Gladys Colclough",
+    "activity_type": "AI Summary Generated",
+    "priority": "Low",
+    "status": "Completed",
+    "short_description": "AI detected strong buying signals. Adjusted forecast probability to 90%."
+  },
+  {
+    "activity_id": "ACT-90008",
+    "timestamp": "2026-06-16T14:45:00Z",
+    "account_name": "Bubba Gump",
+    "sales_rep": "Jonathan Berthelot",
+    "activity_type": "Demo Completed",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Walked through AI lead scoring for entertainment accounts."
+  },
+  {
+    "activity_id": "ACT-90009",
+    "timestamp": "2026-06-16T15:10:00Z",
+    "account_name": "Bubba Gump",
+    "sales_rep": "Jonathan Berthelot",
+    "activity_type": "Proposal Sent",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Sent hospitality case study and ROI calculator spreadsheet."
+  },
+  {
+    "activity_id": "ACT-90010",
+    "timestamp": "2026-06-17T09:00:00Z",
+    "account_name": "Cancity",
+    "sales_rep": "Darcel Schlecht",
+    "activity_type": "Client Replied",
+    "priority": "High",
+    "status": "Action Required",
+    "short_description": "Lori Grimes requested expedited shipping timeline."
+  },
+  {
+    "activity_id": "ACT-90011",
+    "timestamp": "2026-06-17T10:45:30Z",
+    "account_name": "Cheers",
+    "sales_rep": "Marty Freudenburg",
+    "activity_type": "Meeting Scheduled",
+    "priority": "Medium",
+    "status": "Pending",
+    "short_description": "Follow-up technical sync regarding legacy POS batch uploads scheduled."
+  },
+  {
+    "activity_id": "ACT-90012",
+    "timestamp": "2026-06-17T11:15:00Z",
+    "account_name": "Isdom",
+    "sales_rep": "Vicki Laflamme",
+    "activity_type": "Lead Converted",
+    "priority": "High",
+    "status": "Completed",
+    "short_description": "Status moved to MQL due to high engagement on developer portal."
+  },
+  {
+    "activity_id": "ACT-90013",
+    "timestamp": "2026-06-17T13:30:00Z",
+    "account_name": "Acme Corporation",
+    "sales_rep": "Gladys Colclough",
+    "activity_type": "Contract Reviewed",
+    "priority": "Critical",
+    "status": "Completed",
+    "short_description": "Confirmed 99.99% uptime SLA language for final order form."
+  },
+  {
+    "activity_id": "ACT-90014",
+    "timestamp": "2026-06-17T14:00:00Z",
+    "account_name": "Blackzim",
+    "sales_rep": "Cecily Lampkin",
+    "activity_type": "Contract Sent",
+    "priority": "Critical",
+    "status": "Pending Signature",
+    "short_description": "MSA sent via DocuSign to Elias Vance."
+  },
+  {
+    "activity_id": "ACT-90015",
+    "timestamp": "2026-06-18T08:00:00Z",
+    "account_name": "Blackzim",
+    "sales_rep": "Cecily Lampkin",
+    "activity_type": "Lead Converted",
+    "priority": "High",
+    "status": "Closed Won",
+    "short_description": "MSA signed. Deal marked as Closed-Won."
+  },
+  {
+    "activity_id": "ACT-90016",
+    "timestamp": "2026-06-18T09:45:00Z",
+    "account_name": "Betatech",
+    "sales_rep": "Niesha Huffines",
+    "activity_type": "Technical Demo Requested",
+    "priority": "Medium",
+    "status": "Action Required",
+    "short_description": "Client requested demo of predictive maintenance telemetry."
+  },
+  {
+    "activity_id": "ACT-90017",
+    "timestamp": "2026-06-18T10:10:00Z",
+    "account_name": "Silis",
+    "sales_rep": "Kary Hendrixson",
+    "activity_type": "AI Summary Generated",
+    "priority": "Low",
+    "status": "Completed",
+    "short_description": "AI flagged high interest in SDR coaching and battle cards."
+  },
+  {
+    "activity_id": "ACT-90018",
+    "timestamp": "2026-06-18T11:30:00Z",
+    "account_name": "Bioplex",
+    "sales_rep": "Lajuana Vencill",
+    "activity_type": "Email Opened",
+    "priority": "Low",
+    "status": "Tracked",
+    "short_description": "Security team downloaded SOC2 report from Trust Center."
+  },
+  {
+    "activity_id": "ACT-90019",
+    "timestamp": "2026-06-18T14:00:00Z",
+    "account_name": "Cancity",
+    "sales_rep": "Darcel Schlecht",
+    "activity_type": "Proposal Sent",
+    "priority": "High",
+    "status": "Completed",
+    "short_description": "Sent rush proposal for 15 MG Special units with July 1 delivery guarantee."
+  },
+  {
+    "activity_id": "ACT-90020",
+    "timestamp": "2026-06-18T16:15:00Z",
+    "account_name": "Cheers",
+    "sales_rep": "Marty Freudenburg",
+    "activity_type": "Lead Lost",
+    "priority": "Low",
+    "status": "Closed",
+    "short_description": "Deal Stalled. IT team pushing project to Q4."
+  },
+  {
+    "activity_id": "ACT-90021",
+    "timestamp": "2026-06-19T09:00:00Z",
+    "account_name": "Acme Corporation",
+    "sales_rep": "Gladys Colclough",
+    "activity_type": "Onboarding Started",
+    "priority": "Critical",
+    "status": "Active",
+    "short_description": "Deal Won. CS kick-off scheduled for 2,800 seat rollout."
+  },
+  {
+    "activity_id": "ACT-90022",
+    "timestamp": "2026-06-19T10:30:00Z",
+    "account_name": "Bubba Gump",
+    "sales_rep": "Jonathan Berthelot",
+    "activity_type": "Client Replied",
+    "priority": "Medium",
+    "status": "Action Required",
+    "short_description": "Client submitted ROI calculator, asking for pricing tiers."
+  },
+  {
+    "activity_id": "ACT-90023",
+    "timestamp": "2026-06-19T11:40:00Z",
+    "account_name": "Isdom",
+    "sales_rep": "Vicki Laflamme",
+    "activity_type": "Follow-up Pending",
+    "priority": "High",
+    "status": "Scheduled",
+    "short_description": "Generated and sent 14-day API sandbox developer credentials."
+  },
+  {
+    "activity_id": "ACT-90024",
+    "timestamp": "2026-06-19T13:00:00Z",
+    "account_name": "Cancity",
+    "sales_rep": "Darcel Schlecht",
+    "activity_type": "Contract Reviewed",
+    "priority": "Critical",
+    "status": "Completed",
+    "short_description": "Legal signed off on rush delivery terms."
+  },
+  {
+    "activity_id": "ACT-90025",
+    "timestamp": "2026-06-19T14:15:00Z",
+    "account_name": "Bioholding",
+    "sales_rep": "Versie Hillebrand",
+    "activity_type": "Meeting Scheduled",
+    "priority": "Medium",
+    "status": "Pending",
+    "short_description": "IT review scheduled for next Tuesday."
+  },
+  {
+    "activity_id": "ACT-90026",
+    "timestamp": "2026-06-19T15:30:00Z",
+    "account_name": "Silis",
+    "sales_rep": "Kary Hendrixson",
+    "activity_type": "Proposal Sent",
+    "priority": "High",
+    "status": "Completed",
+    "short_description": "Sent 30-day paid pilot agreement for 10 SDR seats."
+  },
+  {
+    "activity_id": "ACT-90027",
+    "timestamp": "2026-06-19T16:45:00Z",
+    "account_name": "Blackzim",
+    "sales_rep": "Cecily Lampkin",
+    "activity_type": "Onboarding Started",
+    "priority": "Critical",
+    "status": "In Progress",
+    "short_description": "Hardware shipping initiated for GTX Pro units."
+  },
+  {
+    "activity_id": "ACT-90028",
+    "timestamp": "2026-06-20T08:30:00Z",
+    "account_name": "Betatech",
+    "sales_rep": "Niesha Huffines",
+    "activity_type": "Meeting Scheduled",
+    "priority": "High",
+    "status": "Pending",
+    "short_description": "Telemetry deep dive scheduled with lead technician."
+  },
+  {
+    "activity_id": "ACT-90029",
+    "timestamp": "2026-06-20T09:15:00Z",
+    "account_name": "Bioplex",
+    "sales_rep": "Lajuana Vencill",
+    "activity_type": "Client Replied",
+    "priority": "Medium",
+    "status": "Action Required",
+    "short_description": "Security team cleared SOC2 report. Ready for pilot discussion."
+  },
+  {
+    "activity_id": "ACT-90030",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "account_name": "Cancity",
+    "sales_rep": "Darcel Schlecht",
+    "activity_type": "Lead Converted",
+    "priority": "High",
+    "status": "Closed Won",
+    "short_description": "PO received for 15 MG Special units."
+  },
+  {
+    "activity_id": "ACT-90031",
+    "timestamp": "2026-06-20T11:10:00Z",
+    "account_name": "Isdom",
+    "sales_rep": "Vicki Laflamme",
+    "activity_type": "AI Summary Generated",
+    "priority": "Low",
+    "status": "Completed",
+    "short_description": "Detected initial webhook payload successfully parsed in sandbox."
+  },
+  {
+    "activity_id": "ACT-90032",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "account_name": "Bubba Gump",
+    "sales_rep": "Jonathan Berthelot",
+    "activity_type": "Pricing Discussed",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Outlined volume tiers for event sales team."
+  },
+  {
+    "activity_id": "ACT-90033",
+    "timestamp": "2026-06-20T13:45:00Z",
+    "account_name": "Silis",
+    "sales_rep": "Kary Hendrixson",
+    "activity_type": "Contract Reviewed",
+    "priority": "High",
+    "status": "Completed",
+    "short_description": "Pilot agreement signed via DocuSign."
+  },
+  {
+    "activity_id": "ACT-90034",
+    "timestamp": "2026-06-20T14:30:00Z",
+    "account_name": "Acme Corporation",
+    "sales_rep": "Gladys Colclough",
+    "activity_type": "Technical Demo Requested",
+    "priority": "Medium",
+    "status": "Pending",
+    "short_description": "CS team handling custom workflow buildout request."
+  },
+  {
+    "activity_id": "ACT-90035",
+    "timestamp": "2026-06-20T15:20:00Z",
+    "account_name": "Bioholding",
+    "sales_rep": "Versie Hillebrand",
+    "activity_type": "AI Summary Generated",
+    "priority": "Low",
+    "status": "Completed",
+    "short_description": "Flagged competitor mention during email sync."
+  },
+  {
+    "activity_id": "ACT-90036",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "account_name": "Silis",
+    "sales_rep": "Kary Hendrixson",
+    "activity_type": "Onboarding Started",
+    "priority": "High",
+    "status": "Active",
+    "short_description": "Pilot kick-off call completed. Battle card creation started."
+  },
+  {
+    "activity_id": "ACT-90037",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "account_name": "Bioplex",
+    "sales_rep": "Lajuana Vencill",
+    "activity_type": "Proposal Sent",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Sent initial pricing proposal for GTX Plus Pro systems."
+  },
+  {
+    "activity_id": "ACT-90038",
+    "timestamp": "2026-06-21T10:15:00Z",
+    "account_name": "Cancity",
+    "sales_rep": "Darcel Schlecht",
+    "activity_type": "Onboarding Started",
+    "priority": "Critical",
+    "status": "In Progress",
+    "short_description": "Hardware tracking numbers provided to logistics team."
+  },
+  {
+    "activity_id": "ACT-90039",
+    "timestamp": "2026-06-21T11:45:00Z",
+    "account_name": "Isdom",
+    "sales_rep": "Vicki Laflamme",
+    "activity_type": "Client Replied",
+    "priority": "High",
+    "status": "Action Required",
+    "short_description": "Engineering requested increased API rate limit for sandbox."
+  },
+  {
+    "activity_id": "ACT-90040",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "account_name": "Betatech",
+    "sales_rep": "Niesha Huffines",
+    "activity_type": "Demo Completed",
+    "priority": "Medium",
+    "status": "Completed",
+    "short_description": "Successfully demonstrated predictive maintenance dashboard to IT lead."
+  }
+]
