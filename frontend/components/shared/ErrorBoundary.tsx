@@ -1,57 +1,57 @@
-"use client";
+'use client'
 
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React from 'react'
 
 interface Props {
-  children?: ReactNode;
-  fallback?: ReactNode;
+  children: React.ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean
+  error?: Error
 }
 
-export class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false,
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+export class ErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
 
-  public render() {
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error('ErrorBoundary caught:', error, info)
+  }
+
+  render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
       return (
-        <div style={{ padding: "20px", color: "#ef4444", background: "#141414", minHeight: "100vh" }}>
-          <h2>Oops, there is an error!</h2>
-          <p>{this.state.error?.message}</p>
-          <button
-            onClick={() => this.setState({ hasError: false })}
-            style={{
-              marginTop: "16px",
-              padding: "8px 16px",
-              background: "#4f7bff",
-              color: "#fff",
-              border: "none",
-              borderRadius: "4px",
-              cursor: "pointer"
+        <div style={{ 
+          background: '#141414', color: '#e0e0e0', 
+          minHeight: '100dvh', display: 'flex',
+          alignItems: 'center', justifyContent: 'center',
+          flexDirection: 'column', gap: 12, padding: 24,
+          fontFamily: 'Inter, system-ui, sans-serif'
+        }}>
+          <p style={{ color: '#f87171', fontSize: 14 }}>Something went wrong</p>
+          <p style={{ color: '#555', fontSize: 12 }}>
+            {this.state.error?.message || 'Unknown error'}
+          </p>
+          <button 
+            onClick={() => window.location.href = '/login'}
+            style={{ 
+              background: '#4f7bff', border: 'none', borderRadius: 7,
+              padding: '8px 16px', color: 'white', cursor: 'pointer',
+              fontSize: 13, marginTop: 8
             }}
           >
-            Try again
+            Go to Login
           </button>
         </div>
-      );
+      )
     }
-
-    return this.props.children;
+    return this.props.children
   }
 }
