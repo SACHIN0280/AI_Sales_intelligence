@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: "SalesMind",
@@ -26,8 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -39,8 +41,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body style={{ background: "#141414", color: "#e0e0e0", minHeight: "100vh" }}>
-        {children}
+      <body style={{ background: '#141414', color: '#e0e0e0' }}>
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
         <Toaster
           position="bottom-right"
           toastOptions={{
