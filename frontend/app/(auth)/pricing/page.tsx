@@ -63,6 +63,7 @@ export default function PricingPage() {
 
   const handleSelect = async (plan: string) => {
     setLoading(plan);
+    localStorage.setItem("salesmind_plan", plan);
     await new Promise(r => setTimeout(r, 600));
     router.replace("/dashboard");
   };
