@@ -1,13 +1,15 @@
 "use client";
 
-import { Bell } from "lucide-react";
+import { Bell, Menu } from "lucide-react";
 
 interface TopBarProps {
   title: string;
   subtitle?: string;
+  onMenuClick?: () => void;
+  isMobile?: boolean;
 }
 
-export default function TopBar({ title, subtitle }: TopBarProps) {
+export default function TopBar({ title, subtitle, onMenuClick, isMobile }: TopBarProps) {
   return (
     <header
       style={{
@@ -17,7 +19,7 @@ export default function TopBar({ title, subtitle }: TopBarProps) {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "0 48px",
+        padding: isMobile ? "0 16px" : "0 48px",
         position: "sticky",
         top: 0,
         zIndex: 40,
@@ -26,7 +28,12 @@ export default function TopBar({ title, subtitle }: TopBarProps) {
     >
       {/* Left: title + subtitle */}
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        <span style={{ color: "#f0f0f0", fontSize: 14, fontWeight: 500 }}>
+        {isMobile && (
+          <button onClick={onMenuClick} style={{ background: "transparent", border: "none", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center" }}>
+            <Menu size={18} />
+          </button>
+        )}
+        <span style={{ color: "#f0f0f0", fontSize: 14, fontWeight: 500, marginLeft: isMobile ? 8 : 0 }}>
           {title}
         </span>
         {subtitle && (

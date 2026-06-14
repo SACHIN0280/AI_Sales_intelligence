@@ -31,7 +31,7 @@ const navItems = [
   { href: "/settings",  label: "Settings",     icon: Settings     },
 ];
 
-export default function Sidebar({ collapsed, setCollapsed }: { collapsed: boolean, setCollapsed: (c: boolean | ((prev: boolean) => boolean)) => void }) {
+export default function Sidebar({ collapsed, setCollapsed, isMobile }: { collapsed: boolean, setCollapsed: (c: boolean | ((prev: boolean) => boolean)) => void, isMobile?: boolean }) {
   const pathname = usePathname();
   const router   = useRouter();
 
@@ -66,8 +66,8 @@ export default function Sidebar({ collapsed, setCollapsed }: { collapsed: boolea
   return (
     <aside
       style={{
-        width: collapsed ? 56 : 260,
-        minWidth: collapsed ? 56 : 260,
+        width: (collapsed && isMobile) ? 0 : (collapsed ? 56 : 260),
+        minWidth: (collapsed && isMobile) ? 0 : (collapsed ? 56 : 260),
         background: "#0a0a0a",
         borderRight: "1px solid #1c1c1c",
         display: "flex",
@@ -169,8 +169,8 @@ export default function Sidebar({ collapsed, setCollapsed }: { collapsed: boolea
         </button>
       </div>
 
-      {/* Collapsed expand button */}
-      {collapsed && (
+      {/* Collapsed expand button (only on desktop) */}
+      {collapsed && !isMobile && (
         <button
           onClick={() => setCollapsed(false)}
           style={{
