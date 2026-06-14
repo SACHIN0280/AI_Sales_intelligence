@@ -19,15 +19,19 @@ html, body {
 ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
 
 /* ── Layout ── */
-.page { padding: 40px 48px; }
+.page { padding: 20px 16px; }
+@media (min-width: 768px) {
+  .page { padding: 40px 48px; }
+}
 .page-title { font-size: 24px; font-weight: 600; color: #f0f0f0; margin-bottom: 4px; }
 .page-subtitle { font-size: 13px; color: #555; }
-.page-header { margin-bottom: 32px; display: flex; align-items: baseline; gap: 24px; }
+.page-header { margin-bottom: 32px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px md:gap-24px; }
 .page-header-meta { font-size: 13px; color: #555; }
 .page-header-metric { font-size: 20px; font-weight: 600; color: #4f7bff; }
 
 /* ── Table ── */
-.relay-table { width: 100%; border-collapse: collapse; }
+.table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.relay-table { width: 100%; border-collapse: collapse; min-width: 600px; }
 .relay-table th {
   text-align: left; font-size: 13px; font-weight: 400;
   color: #555; padding: 8px 16px;
@@ -103,7 +107,7 @@ html, body {
 .btn-ghost:hover { border-color: #444; color: #ccc; }
 
 /* ── KPI strip ── */
-.kpi-strip { display: flex; gap: 40px; margin-bottom: 32px; }
+.kpi-strip { display: flex; flex-wrap: wrap; gap: 20px md:gap-40px; margin-bottom: 32px; }
 .kpi-item {}
 .kpi-value { font-size: 22px; font-weight: 600; color: #f0f0f0; }
 .kpi-value.accent { color: #4f7bff; }
@@ -153,7 +157,7 @@ html, body {
   background: #1a1a1a; border: 1px solid #252525;
   border-radius: 7px; padding: 8px 14px;
   font-size: 13px; color: #d0d0d0;
-  font-family: inherit; outline: none; width: 280px;
+  font-family: inherit; outline: none; width: 100%; max-width: 280px;
 }
 .relay-search:focus { border-color: #4f7bff; }
 .relay-search::placeholder { color: #3a3a3a; }
