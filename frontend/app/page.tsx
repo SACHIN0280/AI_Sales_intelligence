@@ -150,51 +150,120 @@ export default function LandingPage() {
               <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#f59e0b" }} />
               <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#10b981" }} />
             </div>
-            {/* Mockup Content */}
-            <div style={{ flex: 1, display: "flex", background: "#0a0a0a" }}>
+            {/* Mockup Content (Real UI Recreation) */}
+            <div style={{ flex: 1, display: "flex", background: "#0f0f11", overflow: "hidden", fontFamily: "Inter, sans-serif" }}>
               {/* Sidebar */}
-              <div style={{ width: 220, borderRight: "1px solid rgba(255,255,255,0.05)", padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
-                <div style={{ height: 24, width: "60%", background: "rgba(255,255,255,0.1)", borderRadius: 4, marginBottom: 16 }} />
-                {[1,2,3,4,5,6].map(i => (
-                  <div key={i} style={{ height: 16, width: i % 2 === 0 ? "80%" : "60%", background: i === 1 ? "rgba(124,92,252,0.2)" : "rgba(255,255,255,0.05)", borderRadius: 4 }} />
-                ))}
-                <div style={{ flex: 1 }} />
-                <div style={{ height: 40, width: "100%", background: "rgba(255,255,255,0.03)", borderRadius: 8 }} />
-              </div>
-
-              {/* Main Content */}
-              <div style={{ flex: 1, padding: 32, display: "flex", flexDirection: "column", gap: 24 }}>
-                {/* Header */}
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ height: 28, width: 200, background: "rgba(255,255,255,0.1)", borderRadius: 6 }} />
-                  <div style={{ height: 32, width: 120, background: "rgba(124,92,252,0.2)", borderRadius: 16 }} />
+              <div style={{ width: 220, background: "#0a0a0a", borderRight: "1px solid rgba(255,255,255,0.05)", padding: "24px 0", display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "0 24px", marginBottom: 32 }}>
+                  <div style={{ width: 24, height: 24, borderRadius: 6, background: "linear-gradient(135deg, #a78bfa, #7c5cfc)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Brain size={14} color="#fff" />
+                  </div>
+                  <span style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>SalesMind</span>
                 </div>
                 
-                {/* KPI Cards */}
-                <div style={{ display: "flex", gap: 20 }}>
-                  {[1,2,3].map(i => (
-                    <div key={i} style={{ flex: 1, height: 100, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 12, padding: 20 }}>
-                       <div style={{ height: 14, width: "40%", background: "rgba(255,255,255,0.1)", borderRadius: 4, marginBottom: 12 }} />
-                       <div style={{ height: 32, width: "60%", background: "rgba(255,255,255,0.2)", borderRadius: 6 }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                  {[
+                    { name: "AI Copilot", icon: Sparkles },
+                    { name: "Leads", icon: Target },
+                    { name: "Meetings", icon: Target },
+                    { name: "Analytics", icon: BarChart3, active: true },
+                    { name: "Messages", icon: Zap },
+                    { name: "Settings", icon: Shield },
+                  ].map((item, i) => (
+                    <div key={i} style={{ 
+                      display: "flex", alignItems: "center", gap: 12, padding: "12px 24px",
+                      background: item.active ? "rgba(124,92,252,0.1)" : "transparent",
+                      borderLeft: item.active ? "3px solid #a78bfa" : "3px solid transparent",
+                      color: item.active ? "#fff" : "#888"
+                    }}>
+                      <item.icon size={16} color={item.active ? "#a78bfa" : "#888"} />
+                      <span style={{ fontSize: 14, fontWeight: item.active ? 500 : 400 }}>{item.name}</span>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                {/* Main Chart Area */}
-                <div style={{ flex: 1, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 12, padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
-                  <div style={{ height: 20, width: 150, background: "rgba(255,255,255,0.1)", borderRadius: 4 }} />
-                  <div style={{ flex: 1, borderBottom: "1px solid rgba(255,255,255,0.1)", borderLeft: "1px solid rgba(255,255,255,0.1)", position: "relative", paddingLeft: 10, paddingBottom: 10 }}>
-                     <svg viewBox="0 0 100 50" preserveAspectRatio="none" style={{ width: "100%", height: "100%", overflow: "visible" }}>
+              {/* Main Content */}
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", background: "#0f0f11" }}>
+                {/* Top Nav */}
+                <div style={{ height: 60, borderBottom: "1px solid rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 40px" }}>
+                  <div style={{ fontSize: 14, color: "#888" }}>
+                    <span style={{ color: "#e0e0e0" }}>Analytics</span> / AI-powered performance metrics
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#10b981" }} />
+                    <div style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, color: "#fff", fontWeight: 600 }}>SC</div>
+                  </div>
+                </div>
+
+                {/* Dashboard Body */}
+                <div style={{ padding: 40, display: "flex", flexDirection: "column", gap: 40, flex: 1 }}>
+                  
+                  {/* Header Titles */}
+                  <div>
+                    <h2 style={{ fontSize: 28, fontWeight: 600, color: "#fff", marginBottom: 8, fontFamily: "serif" }}>Analytics</h2>
+                    <p style={{ fontSize: 14, color: "#888" }}>AI-powered performance metrics and predictive intelligence</p>
+                  </div>
+
+                  {/* Metrics Row */}
+                  <div style={{ display: "flex", gap: 48 }}>
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 700, color: "#3b82f6", marginBottom: 6 }}>$142,500,000</div>
+                      <div style={{ fontSize: 13, color: "#666" }}>Total Pipeline</div>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 700, color: "#fff", marginBottom: 6 }}>84.2%</div>
+                      <div style={{ fontSize: 13, color: "#666" }}>Global Win Rate</div>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 700, color: "#fff", marginBottom: 6 }}>$125,000</div>
+                      <div style={{ fontSize: 13, color: "#666" }}>Avg Deal Size</div>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 700, color: "#fff", marginBottom: 6 }}>1,140</div>
+                      <div style={{ fontSize: 13, color: "#666" }}>Active Deals</div>
+                    </div>
+                  </div>
+
+                  {/* Chart Section */}
+                  <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                    <div style={{ fontSize: 14, color: "#888", marginBottom: 24 }}>Quarterly Won Revenue</div>
+                    
+                    <div style={{ flex: 1, position: "relative", borderBottom: "1px solid rgba(255,255,255,0.05)", marginLeft: 40, marginBottom: 24 }}>
+                      {/* Grid lines */}
+                      {[0, 1, 2].map(i => (
+                        <div key={i} style={{ position: "absolute", bottom: `${i * 50}%`, left: 0, right: 0, borderBottom: "1px dashed rgba(255,255,255,0.03)" }} />
+                      ))}
+                      
+                      {/* Y-axis labels */}
+                      <div style={{ position: "absolute", left: -44, top: 0, bottom: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", fontSize: 11, color: "#444", paddingBottom: 0 }}>
+                        <span>$50M</span>
+                        <span>$25M</span>
+                        <span>$0M</span>
+                      </div>
+
+                      {/* SVG Line Chart */}
+                      <svg viewBox="0 0 100 50" preserveAspectRatio="none" style={{ width: "100%", height: "100%", overflow: "visible" }}>
                         <defs>
-                          <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0%" stopColor="rgba(124,92,252,0.3)" />
-                            <stop offset="100%" stopColor="rgba(124,92,252,0)" />
+                          <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stopColor="rgba(59,130,246,0.2)" />
+                            <stop offset="100%" stopColor="rgba(59,130,246,0)" />
                           </linearGradient>
                         </defs>
-                        <path d="M0,45 Q15,40 25,30 T45,25 T65,15 T85,20 T100,5" fill="none" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" />
-                        <path d="M0,45 Q15,40 25,30 T45,25 T65,15 T85,20 T100,5 L100,50 L0,50 Z" fill="url(#chartGradient)" />
-                     </svg>
+                        <path d="M0,35 Q10,20 25,25 T50,10 T75,15 T100,5" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" />
+                        <path d="M0,35 Q10,20 25,25 T50,10 T75,15 T100,5 L100,50 L0,50 Z" fill="url(#chartFill)" />
+                      </svg>
+                      
+                      {/* X-axis labels */}
+                      <div style={{ position: "absolute", bottom: -24, left: 0, right: 0, display: "flex", justifyContent: "space-between", fontSize: 11, color: "#444" }}>
+                        <span>Q1 2024</span>
+                        <span>Q2 2024</span>
+                        <span>Q3 2024</span>
+                        <span>Q4 2024</span>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
               </div>
             </div>
