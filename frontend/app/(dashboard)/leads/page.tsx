@@ -73,24 +73,6 @@ export default function LeadsPage() {
         </div>
 
         {/* ── Table ── */}
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid #222" }}>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 16px 8px 0" }}>Company</th>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 24px 8px 0" }}>Agent</th>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 24px 8px 0" }}>Product</th>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 24px 8px 0" }}>Stage</th>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 24px 8px 0" }}>Value</th>
-              <th style={{ textAlign: "left", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 16px 8px 0" }}>Age (Days)</th>
-              <th style={{ textAlign: "right", fontSize: 13, fontWeight: 400, color: "#555", padding: "8px 0" }}>AI Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leads.slice(0, 100).map((lead) => { // Render top 100 to avoid lag
-              return (
-                <tr
-                  key={lead.opportunity_id}
-                  style={{ borderBottom: "1px solid #1a1a1a" }}
         <div className="table-responsive">
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
@@ -105,7 +87,7 @@ export default function LeadsPage() {
               </tr>
             </thead>
             <tbody>
-              {leads.slice(0, 100).map((lead) => { // Render top 100 to avoid lag
+              {leads.slice(0, 100).map((lead) => {
                 return (
                   <tr
                     key={lead.opportunity_id}
@@ -113,40 +95,27 @@ export default function LeadsPage() {
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.012)"}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}
                   >
-                    {/* Account */}
                     <td style={{ padding: "16px 16px 16px 0", verticalAlign: "top" }}>
                       <div style={{ fontSize: 14, fontWeight: 500, color: "#e8e8e8" }}>{lead.account}</div>
                       <div style={{ fontSize: 12, color: "#555", marginTop: 2 }}>{lead.sector}</div>
                     </td>
-
-                    {/* Agent */}
                     <td style={{ padding: "16px 24px 16px 0", verticalAlign: "top", fontSize: 14, color: "#d0d0d0" }}>
                       {lead.agent}
                     </td>
-
-                    {/* Product */}
                     <td style={{ padding: "16px 24px 16px 0", verticalAlign: "top", fontSize: 14, color: "#888" }}>
                       {lead.product}
                     </td>
-
-                    {/* Stage */}
                     <td style={{ padding: "16px 24px 16px 0", verticalAlign: "top" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 4, color: lead.stage === "Engaging" ? "#4f7bff" : "#888", fontSize: 14 }}>
                         {lead.stage}
                       </div>
                     </td>
-
-                    {/* Value */}
                     <td style={{ padding: "16px 24px 16px 0", verticalAlign: "top", fontSize: 14, color: "#d0d0d0" }}>
                       {compactValue(lead.estimated_value)}
                     </td>
-
-                    {/* Age */}
                     <td style={{ padding: "16px 16px 16px 0", verticalAlign: "top", fontSize: 13, color: "#555", whiteSpace: "nowrap" }}>
                       {lead.days_in_stage}d
                     </td>
-
-                    {/* AI Score */}
                     <td style={{ padding: "16px 0", verticalAlign: "top", textAlign: "right" }}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
                         <span style={{ fontSize: 14, fontWeight: 500, color: lead.ai_score >= 75 ? "#4ade80" : lead.ai_score >= 50 ? "#f59e0b" : "#f87171" }}>

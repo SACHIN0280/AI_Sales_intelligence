@@ -25,7 +25,10 @@ html, body {
 }
 .page-title { font-size: 24px; font-weight: 600; color: #f0f0f0; margin-bottom: 4px; }
 .page-subtitle { font-size: 13px; color: #555; }
-.page-header { margin-bottom: 32px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px md:gap-24px; }
+.page-header { margin-bottom: 32px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px; }
+@media (min-width: 768px) {
+  .page-header { gap: 24px; }
+}
 .page-header-meta { font-size: 13px; color: #555; }
 .page-header-metric { font-size: 20px; font-weight: 600; color: #4f7bff; }
 
@@ -107,7 +110,10 @@ html, body {
 .btn-ghost:hover { border-color: #444; color: #ccc; }
 
 /* ── KPI strip ── */
-.kpi-strip { display: flex; flex-wrap: wrap; gap: 20px md:gap-40px; margin-bottom: 32px; }
+.kpi-strip { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 32px; }
+@media (min-width: 768px) {
+  .kpi-strip { gap: 40px; }
+}
 .kpi-item {}
 .kpi-value { font-size: 22px; font-weight: 600; color: #f0f0f0; }
 .kpi-value.accent { color: #4f7bff; }
