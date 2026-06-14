@@ -248,12 +248,12 @@ export default function LoginPage() {
       </div>
       
       {/* Responsive Media Query Style */}
-      <style dangerouslySetInnerHTML={{__html: \`
+      <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 1000px) {
           body > div > div:first-of-type { display: none !important; }
           body > div > div:last-of-type { flex: 1 !important; padding: 20px !important; }
         }
-      \`}} />
+      `}} />
     </div>
   );
 }
