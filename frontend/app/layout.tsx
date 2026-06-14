@@ -3,7 +3,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "SalesMind AI — AI-Powered Sales Intelligence Platform",
+  title: "SalesMind",
   description:
     "AI-powered sales intelligence for modern teams. Score leads, summarize meetings, generate follow-ups, and close more deals with SalesMind AI.",
   keywords: "AI sales, lead scoring, sales intelligence, CRM, sales automation",
