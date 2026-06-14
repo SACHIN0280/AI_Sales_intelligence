@@ -151,12 +151,52 @@ export default function LandingPage() {
               <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#10b981" }} />
             </div>
             {/* Mockup Content */}
-            <div style={{ flex: 1, padding: 40, display: "flex", gap: 40, opacity: 0.8 }}>
-              <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 20 }}>
-                <div style={{ height: 120, background: "rgba(255,255,255,0.03)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.05)" }} />
-                <div style={{ flex: 1, background: "rgba(255,255,255,0.03)", borderRadius: 12, border: "1px solid rgba(255,255,255,0.05)" }} />
+            <div style={{ flex: 1, display: "flex", background: "#0a0a0a" }}>
+              {/* Sidebar */}
+              <div style={{ width: 220, borderRight: "1px solid rgba(255,255,255,0.05)", padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+                <div style={{ height: 24, width: "60%", background: "rgba(255,255,255,0.1)", borderRadius: 4, marginBottom: 16 }} />
+                {[1,2,3,4,5,6].map(i => (
+                  <div key={i} style={{ height: 16, width: i % 2 === 0 ? "80%" : "60%", background: i === 1 ? "rgba(124,92,252,0.2)" : "rgba(255,255,255,0.05)", borderRadius: 4 }} />
+                ))}
+                <div style={{ flex: 1 }} />
+                <div style={{ height: 40, width: "100%", background: "rgba(255,255,255,0.03)", borderRadius: 8 }} />
               </div>
-              <div style={{ width: 320, background: "linear-gradient(180deg, rgba(124,92,252,0.05) 0%, rgba(255,255,255,0.02) 100%)", borderRadius: 12, border: "1px solid rgba(124,92,252,0.1)" }} />
+
+              {/* Main Content */}
+              <div style={{ flex: 1, padding: 32, display: "flex", flexDirection: "column", gap: 24 }}>
+                {/* Header */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ height: 28, width: 200, background: "rgba(255,255,255,0.1)", borderRadius: 6 }} />
+                  <div style={{ height: 32, width: 120, background: "rgba(124,92,252,0.2)", borderRadius: 16 }} />
+                </div>
+                
+                {/* KPI Cards */}
+                <div style={{ display: "flex", gap: 20 }}>
+                  {[1,2,3].map(i => (
+                    <div key={i} style={{ flex: 1, height: 100, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 12, padding: 20 }}>
+                       <div style={{ height: 14, width: "40%", background: "rgba(255,255,255,0.1)", borderRadius: 4, marginBottom: 12 }} />
+                       <div style={{ height: 32, width: "60%", background: "rgba(255,255,255,0.2)", borderRadius: 6 }} />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Main Chart Area */}
+                <div style={{ flex: 1, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 12, padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+                  <div style={{ height: 20, width: 150, background: "rgba(255,255,255,0.1)", borderRadius: 4 }} />
+                  <div style={{ flex: 1, borderBottom: "1px solid rgba(255,255,255,0.1)", borderLeft: "1px solid rgba(255,255,255,0.1)", position: "relative", paddingLeft: 10, paddingBottom: 10 }}>
+                     <svg viewBox="0 0 100 50" preserveAspectRatio="none" style={{ width: "100%", height: "100%", overflow: "visible" }}>
+                        <defs>
+                          <linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stopColor="rgba(124,92,252,0.3)" />
+                            <stop offset="100%" stopColor="rgba(124,92,252,0)" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,45 Q15,40 25,30 T45,25 T65,15 T85,20 T100,5" fill="none" stroke="#a78bfa" strokeWidth="1.5" strokeLinecap="round" />
+                        <path d="M0,45 Q15,40 25,30 T45,25 T65,15 T85,20 T100,5 L100,50 L0,50 Z" fill="url(#chartGradient)" />
+                     </svg>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
