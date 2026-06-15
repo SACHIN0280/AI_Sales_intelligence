@@ -59,8 +59,10 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }: { collaps
   }, []);
 
   const handleLogout = () => {
-    document.cookie = "salesmind_auth=; path=/; max-age=0";
-    router.push("/login");
+    document.cookie = "salesmind_auth=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0";
+    localStorage.removeItem("salesmind_user_name");
+    localStorage.removeItem("salesmind_user_email");
+    window.location.href = "/login";
   };
 
   return (
