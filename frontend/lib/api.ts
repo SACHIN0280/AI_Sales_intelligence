@@ -1,13 +1,39 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function fetchAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
+  const isGet = !options?.method || options.method === "GET";
+  const cacheKey = `salesmind_cache_${endpoint}`;
+
+  if (isGet && typeof window !== "undefined") {
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      // Fetch in background to update cache for next time
+      fetch(`${API_URL}${endpoint}`, {
+        headers: { "Content-Type": "application/json" },
+        ...options,
+      }).then(res => res.ok ? res.text() : null)
+        .then(text => { if (text) localStorage.setItem(cacheKey, text); })
+        .catch(() => {});
+        
+      try {
+        return JSON.parse(cached);
+      } catch (e) {
+        // Fallback to normal fetch if JSON parse fails
+      }
+    }
+  }
+
   try {
     const res = await fetch(`${API_URL}${endpoint}`, {
       headers: { "Content-Type": "application/json" },
       ...options,
     });
     if (!res.ok) throw new Error(`API error: ${res.status}`);
-    return res.json();
+    const data = await res.json();
+    if (isGet && typeof window !== "undefined") {
+      localStorage.setItem(cacheKey, JSON.stringify(data));
+    }
+    return data;
   } catch {
     throw new Error(`Failed to fetch ${endpoint}`);
   }
