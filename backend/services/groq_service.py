@@ -9,9 +9,9 @@ client = None
 if os.getenv("GROQ_API_KEY") and os.getenv("GROQ_API_KEY") != "your_groq_api_key_here":
     client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 
-COPILOT_SYSTEM = """You are SalesMind AI Copilot, an expert AI sales assistant powered by LLaMA 3.3 70B.
+COPILOT_SYSTEM = """You are SalesMind AI Copilot, an expert AI sales assistant powered by GPT-OSS 120B.
 You help sales teams with:
 - Lead analysis and prioritization
 - Writing personalized outreach emails and LinkedIn messages
